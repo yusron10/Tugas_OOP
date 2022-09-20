@@ -4,13 +4,12 @@ abstract class Smartphone {
 	protected 
 			$tipe;
 
-			public function __construct($tipe = "tipe") {
+			public function __construct($tipe) {
 				$this->tipe = $tipe;
 			}
 		public function getMerk() {
 			return $this->merk;
 		}
-
 		public function getTipe() {
 			return $this->tipe;
 		}
@@ -19,8 +18,8 @@ abstract class Smartphone {
 			$this->volume = $volume;
 		}
 
-		public function getVolume() {
-			return $this->volume;
+		public function getInfoHp() {
+			return "{$this->getMerk()} {$this->getTipe()}";
 		}
 
 
@@ -33,28 +32,33 @@ abstract class Smartphone {
 			return "Mematikan {$this->merk} {$this->tipe}";
 		}
 
-		public function volumeUp($volume) {
-				$v = $this->volume + $volume;
-				if ($v <= 5) {
-					return "Volume anda telah naik menjadi : " . $v;
+
+		public function volumeUp() {
+				$volume = ($this->volume) + 1;
+				if ($volume <= 5) {
+					 echo "Berhasil Menambahkan Volume " . "" . $this->getInfoHp();
+					 $this->volume = $volume;
 			} else {
-				return "Maksimal Volume 5!";
+
+				echo "Maksimal Volume 5!";
 			}
+
 		}
 
 
 
-		public function volumeDown($volume) {
-				$v = $this->volume - $volume;
-				if ($v >= 0) {
-					return "Volume anda telah Turun ke : " . $v;
+		public function volumeDown() {
+				$volume = ($this->volume) - 1;
+				if ($volume >= 0) {
+					echo "Volume anda telah Turun ke : " . $volume;
+					$this->volume = $volume;
 			} else {
 				return "Minimal Volume 1";
 			}
 		}
 
-		public function getInfoHp() {
-			return "{$this->getMerk()} {$this->getTipe()}";
+		public function getVolume() {
+				return "Volume Saat ini : " . $this->volume;
 		}
 
 		abstract public function UI();

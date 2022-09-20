@@ -4,7 +4,7 @@ class Xiaomi extends Smartphone implements Screenshot {
 	protected $version,
 				$merk,
 				$volume;
-	public function __construct($merk = 'merk', $tipe = 'tipe', $volume = 0) {
+	public function __construct($merk = 'merk', $tipe = 'tipe',$volume = 0) {
 		parent::__construct($tipe);
 		$this->merk = $merk;
 		$this->volume = $volume;

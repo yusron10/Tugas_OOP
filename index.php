@@ -2,8 +2,7 @@
 require_once 'App/init.php';
 
 // Xiaomi
-$hx1 = new Xiaomi ("Xiaomi", "Note 9", 5);
-$hx2 = new Xiaomi ("Xiaomi","Note 10", 3);
+$hx2 = new Xiaomi ("Xiaomi","Note 10");
 
 // Samsung
 
@@ -13,6 +12,7 @@ $hs1 = new Samsung ("Samsung","Galaxy Z Flip4", 0);
 
 $ho1 = new Oppo("Oppo","Realme 9 Pro+", 0);
 
+$hx1 = new Xiaomi ("Xiaomi", "Note 9");
 
 // Fungsi Xiaomi
 
@@ -30,16 +30,80 @@ $k->tambahHp($ho1);
 
 echo $k->cetak();
 
-echo $hx1->getTipe();
 echo "<br>";
-echo $hx1->volumeUp(3);
+
+echo $hx2->nyalakan();
+
 echo "<br>";
-echo $hx1->volumeDown(2);
 echo "<br>";
-echo $hx1->getVolume();
+
+echo $hx2->getMerk();
+
 echo "<br>";
-echo $hx1->nyalakan();
 echo "<br>";
+
+echo $hx2->getTipe();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->getVolume();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+$hx2->volumeUp();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->getVolume();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->volumeDown();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->getVolume();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->capture();
+
+echo "<br>";
+echo "<br>";
+
+echo $hx2->matikan();
+
 
 
  ?>
